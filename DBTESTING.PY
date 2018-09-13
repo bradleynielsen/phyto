@@ -16,6 +16,15 @@ print(c.fetchone())
 c.fetchmany(5)
 print(c.fetchall())
 
+
+
+
+
+
+
+
+
+
 ##################
 ####TESTING#######
 ##################
