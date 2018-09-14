@@ -3,12 +3,17 @@ from ImageClass import Image
 from pathlib import Path
 
 #Open DB connection
+#set db to save to memory
 conn = sqlite3.connect(':memory:')
+
+##set db to save to file
+# conn = sqlite3.connect('images.db')
+
 c = conn.cursor()
 print("Starting DB connection")
 
+#create table
 print("Creating Images Table")
-
 c.execute("""CREATE TABLE images (
     filename text,
     hash text,
@@ -17,8 +22,6 @@ c.execute("""CREATE TABLE images (
 
 #Set Path string
 p = Path(r'R:\Images\Wallpapers')
-
-
 
 #Start looping over images
 for file in p.iterdir():
