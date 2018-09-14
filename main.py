@@ -40,6 +40,7 @@ for file in p.iterdir():
 
     #insert recort into table
     img_record = Image(filename, size, hash)
+
     print("Inserting " + hash)
     c.execute("INSERT INTO images VALUES (:filename, :size, :hash)",{'filename': img_record.filename, 'size': img_record.size, 'hash': img_record.hash})
     conn.commit()
@@ -51,6 +52,6 @@ for file in p.iterdir():
 # print(c.fetchall())
 
 
-# #close DB connection
-# conn.close()
-# print("DB connection closed")
+#close DB connection
+conn.close()
+print("DB connection closed")
