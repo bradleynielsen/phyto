@@ -1,6 +1,3 @@
-##################
-####TESTING#######
-##################
 
 c.execute("""CREATE TABLE images (
     filename text,
@@ -15,16 +12,3 @@ c.execute("SELECT * FROM images")
 print(c.fetchone())
 c.fetchmany(5)
 print(c.fetchall())
-
-
-
-
-
-
-
-
-
-
-##################
-####TESTING#######
-##################
